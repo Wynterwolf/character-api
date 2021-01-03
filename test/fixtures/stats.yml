@@ -1,0 +1,23 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  strength: MyString
+  charisma: MyString
+  perception: MyString
+  dexterity: MyString
+  manipulation: MyString
+  intelligence: MyString
+  stamina: MyString
+  appearance: MyString
+  wit: MyString
+
+two:
+  strength: MyString
+  charisma: MyString
+  perception: MyString
+  dexterity: MyString
+  manipulation: MyString
+  intelligence: MyString
+  stamina: MyString
+  appearance: MyString
+  wit: MyString
