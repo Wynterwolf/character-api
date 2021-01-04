@@ -6,8 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-char_a = Character.create(name: 'Lacy', breed: 'This Breed', auspice: 'This Auspice', tribe: 'The Tribe', concept: 'Concept Here')
+char_a = Character.create(name: 'River', breed: 'This Breed', auspice: 'This Auspice', tribe: 'The Tribe', concept: 'Concept Here')
 
-stats_a = Stat.create(strength: 'Some', charisma: 'Some', perception: 'Some', dexterity: 'some', manipulation: 'this', intelligence: 'that', stamina: 'lots', appearance: 'this', wit: 'yes')
+stats_a = Stat.create(strength: 1, charisma: 1, perception: 1, dexterity: 1, manipulation: 1, intelligence: 1, stamina: 1, appearance: 1, wit: 1)
 
-sheet_a = Sheet.create(character: char_a, stat: stats_a)
+sheet_a = Sheet.create(char_a << stats_a).flatten!
