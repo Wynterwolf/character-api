@@ -11,7 +11,8 @@ class CharactersController < ApplicationController
     end
 
     def create 
-        @characters = Character.create(
+        @characters = Character.new(
+            user_id: params[:id],
             name: params[:name],
             breed: params[:breed],
             auspice: params[:auspice],
@@ -33,6 +34,7 @@ class CharactersController < ApplicationController
     def update
         @characters = Character.find(params[:id])
         @characters.update(
+            user_id: params[:id],
             name: params[:name],
             breed: params[:breed],
             auspice: params[:auspice],
