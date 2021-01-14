@@ -11,7 +11,7 @@ class CharactersController < ApplicationController
     end
 
     def create 
-        @characters = user.characters.create(
+        @characters = Character.create(
             name: params[:name],
             breed: params[:breed],
             auspice: params[:auspice],
