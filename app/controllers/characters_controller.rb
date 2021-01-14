@@ -11,12 +11,21 @@ class CharactersController < ApplicationController
     end
 
     def create 
-        @characters = Character.create(
+        @characters = user.characters.create(
             name: params[:name],
             breed: params[:breed],
             auspice: params[:auspice],
             tribe: params[:tribe],
-            concept: params[:concept]
+            concept: params[:concept],
+            strength: params[:strength],
+            charisma: params[:charisma],
+            perception: params[:perception],
+            dexterity: params[:dexterity],
+            manipulation: params[:manipulation],
+            intelligence: params[:intelligence],
+            stamina: params[:stamina],
+            appearance: params[:appearance],
+            wit: params[:wit],
         )
         render json: @characters
     end
@@ -28,7 +37,16 @@ class CharactersController < ApplicationController
             breed: params[:breed],
             auspice: params[:auspice],
             tribe: params[:tribe],
-            concept: params[:concept]
+            concept: params[:concept],
+            strength: params[:strength],
+            charisma: params[:charisma],
+            perception: params[:perception],
+            dexterity: params[:dexterity],
+            manipulation: params[:manipulation],
+            intelligence: params[:intelligence],
+            stamina: params[:stamina],
+            appearance: params[:appearance],
+            wit: params[:wit],
         )
         render json: @characters
     end
