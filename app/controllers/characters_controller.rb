@@ -11,9 +11,9 @@ class CharactersController < ApplicationController
     end
 
     def create 
-        @characters = Character.create(
+        @characters = current_user.characters.create(
             user_id: params[:id],
-            name: params[:name],
+            cname: params[:cname],
             breed: params[:breed],
             auspice: params[:auspice],
             tribe: params[:tribe],
@@ -26,16 +26,15 @@ class CharactersController < ApplicationController
             intelligence: params[:intelligence],
             stamina: params[:stamina],
             appearance: params[:appearance],
-            wit: params[:wit],
-        )
+            wit: params[:wits],
+        ) 
         render json: @characters
     end
 
     def update
         @characters = Character.find(params[:id])
         @characters.update(
-            user_id: params[:id],
-            name: params[:name],
+            # name: params[:name],
             breed: params[:breed],
             auspice: params[:auspice],
             tribe: params[:tribe],

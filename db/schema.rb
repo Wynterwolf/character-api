@@ -13,7 +13,7 @@
 ActiveRecord::Schema.define(version: 2021_01_14_193031) do
 
   create_table "characters", force: :cascade do |t|
-    t.string "name"
+    t.string "cname"
     t.string "breed"
     t.string "auspice"
     t.string "tribe"
